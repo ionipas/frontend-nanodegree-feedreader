@@ -90,6 +90,15 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
+
+        it('should be at least a single entry', function(done) {
+            const entries = document.getElementsByClassName('entry');
+            expect(entries.length).toBeGreaterThan(0);
+            done();
+        });
     }); 
 
     /* TODO: Write a new test suite named "New Feed Selection" */
