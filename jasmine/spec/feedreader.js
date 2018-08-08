@@ -78,7 +78,7 @@ $(function() {
 
             menuIcon.click();
             expect(bodyClass.className).toBe('menu-hidden');
-         })
+         });
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
