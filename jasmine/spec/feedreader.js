@@ -48,7 +48,6 @@ $(function() {
                 expect(y).toBeDefined();
                 expect(y).not.toBe('');
             });
-
         });
     });
 
@@ -79,7 +78,7 @@ $(function() {
 
             menuIcon.click();
             expect(bodyClass.className).toBe('menu-hidden');
-         }) 
+         })
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
@@ -99,7 +98,7 @@ $(function() {
             expect(entries.length).toBeGreaterThan(0);
             done();
         });
-    }); 
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
@@ -125,6 +124,5 @@ $(function() {
             expect(newContent).not.toBe(initialContent);
             done();
         });
-
     });
 }());
