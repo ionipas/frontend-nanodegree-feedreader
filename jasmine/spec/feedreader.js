@@ -64,7 +64,7 @@ $(function() {
         const bodyClass = document.getElementsByTagName('body')[0];
 
         it('should have a "menu-hidden" class', function() {
-            expect(bodyClass.className).toBe('menu-hidden');
+            expect(bodyClass.classList.contains('menu-hidden')).toBe(true);
         });
 
          /* TODO: Write a test that ensures the menu changes
@@ -79,7 +79,7 @@ $(function() {
             expect(bodyClass.className).toBe('');
 
             menuIcon.click();
-            expect(bodyClass.className).toBe('menu-hidden');
+            expect(bodyClass.classList.contains('menu-hidden')).toBe(true);
          });
     });
 
