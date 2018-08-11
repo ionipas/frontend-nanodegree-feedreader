@@ -95,10 +95,9 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('should be at least a single entry', function(done) {
-            const entries = document.getElementsByClassName('entry');
+        it('should be at least a single entry', function() {
+            const entries = document.querySelectorAll('.feed .entry');
             expect(entries.length).toBeGreaterThan(0);
-            done();
         });
     });
 
