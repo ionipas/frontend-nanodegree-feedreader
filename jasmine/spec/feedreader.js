@@ -111,13 +111,11 @@ $(function() {
         let newContent;
         beforeEach(function(done) {
             loadFeed(0, function() {
-                initialContent = document.getElementsByClassName('feed');
-                done();
-            });
-
-            loadFeed(1, function() {
-                newContent = document.getElementsByClassName('feed');
-                done();
+                initialContent = document.getElementsByClassName('feed')[0].innerHTML;
+                loadFeed(1, function() {
+                    newContent = document.getElementsByClassName('feed')[0].innerHTML;
+                    done();
+                });
             });
         });
 
