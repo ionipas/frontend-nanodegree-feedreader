@@ -58,7 +58,7 @@ $(function() {
             const menuIcon = document.getElementsByClassName('menu-icon-link')[0];
 
             menuIcon.click();
-            expect(bodyClass.className).toBe('');
+            expect(bodyClass.classList.contains('menu-hidden')).toBe(false);
 
             menuIcon.click();
             expect(bodyClass.classList.contains('menu-hidden')).toBe(true);
